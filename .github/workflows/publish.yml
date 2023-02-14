@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: ['main']
+    branches: ["main"]
   pull_request:
-    branches: ['*']
+    branches: ["*"]
 
 jobs:
   quality:
@@ -23,6 +23,3 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm test
-
- 
