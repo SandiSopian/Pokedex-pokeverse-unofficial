@@ -11,9 +11,11 @@
     "commit": "git-cz"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^1.0.0-beta.6",
     "commitizen": "^4.3.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .sideBarSearchTab {
+    @apply p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 text-white;
+  }
+
+  .sideBarTabs {
+    @apply p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-700 text-white;
+  }
+}
