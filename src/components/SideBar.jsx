@@ -14,6 +14,7 @@ import { GiPayMoney } from "react-icons/gi";
 import dropdown from "../utils/dropdown";
 import toggleMenuBar from "../utils/toggleMenuBar";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
   const [parent] = useAutoAnimate();
@@ -42,26 +43,26 @@ const SideBar = () => {
             <input type="text" className="text-sm ml-4 w-full bg-transparent focus:outline-none" placeholder="Search" />
           </div>
 
-          <div className="sideBarTabs">
+          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/">
             <TbPokeball />
             <span className="text-sm ml-4 text-gray-200">Pokemon</span>
-          </div>
-          <div className="sideBarTabs">
+          </NavLink>
+          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs " : "sideBarTabs font-normal")} to="/">
             <FaCompactDisc />
             <span className="text-sm ml-4 text-gray-200">TM</span>
-          </div>
-          <div className="sideBarTabs">
+          </NavLink>
+          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs " : "sideBarTabs font-normal")} to="/">
             <BsScrewdriver />
             <span className="text-sm ml-4 text-gray-200">Held Items</span>
-          </div>
-          <div className="sideBarTabs">
+          </NavLink>
+          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs " : "sideBarTabs font-normal")} to="/">
             <SiCrystal />
             <span className="text-sm ml-4 text-gray-200">Z-Crystal</span>
-          </div>
-          <div className="sideBarTabs">
+          </NavLink>
+          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs " : "sideBarTabs font-normal")} to="/">
             <FaMask />
             <span className="text-sm ml-4 text-gray-200">Nature</span>
-          </div>
+          </NavLink>
 
           {/* More */}
           <div className="sideBarTabs" onClick={dropdown}>
@@ -84,14 +85,14 @@ const SideBar = () => {
           <hr className="my-2 text-gray-600" />
 
           {/* Personal Tabs */}
-          <div className="p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-700 text-white">
+          <NavLink to="/about" className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")}>
             <BsInfoCircle />
             <span className="text-sm ml-4 text-gray-200">About</span>
-          </div>
-          <div className="p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-700 text-white">
+          </NavLink>
+          <NavLink to="/support" className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")}>
             <GiPayMoney />
             <span className="text-sm ml-4 text-gray-200">Support Us</span>
-          </div>
+          </NavLink>
         </div>
       </navbar>
     </>
