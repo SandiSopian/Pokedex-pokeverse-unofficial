@@ -24,7 +24,7 @@ const SideBar = () => {
         <GiHamburgerMenu />
       </span>
 
-      <navbar ref={parent}>
+      <nav ref={parent}>
         <div className="sidebar fixed top-0 bottom-0 -ml-8 lg:ml-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-gray-900 ">
           <div className="text-gray-100 text-xl">
             <div className="p-2 mt-1 flex items-center justify-between">
@@ -94,7 +94,7 @@ const SideBar = () => {
             <span className="text-sm ml-4 text-gray-200">Support Us</span>
           </NavLink>
         </div>
-      </navbar>
+      </nav>
     </>
   );
 };
