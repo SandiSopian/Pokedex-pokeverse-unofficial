@@ -7,20 +7,35 @@ const PokeCard = () => {
   const [PokemonDt, setPokemonDt] = useState(PokemonData);
   const [parent] = useAutoAnimate();
 
+  const sortingOptions = [
+    { label: "HP Descending", value: "HP Descending", func: handleSortHPDesc },
+    { label: "HP Ascending", value: "HP Ascending", func: handleSortHPAsc },
+    { label: "ATK Descending", value: "ATK Descending", func: handleSortATKDesc },
+    { label: "ATK Ascending", value: "ATK Ascending", func: handleSortATKAsc },
+    { label: "Speed Descending", value: "Speed Descending", func: handleSortSpeedDesc },
+    { label: "Speed Ascending", value: "Speed Ascending", func: handleSortSpeedAsc },
+    { label: "SpATK Descending", value: "SpATK Descending", func: handleSortSpATKDesc },
+    { label: "SpATK Ascending", value: "SpATK Ascending", func: handleSortSpATKAsc },
+    { label: "DEF Descending", value: "DEF Descending", func: handleSortDEFDesc },
+    { label: "DEF Ascending", value: "DEF Ascending", func: handleSortDEFAsc },
+    { label: "SpDEF Descending", value: "SpDEF Descending", func: handleSortSpDEFDesc },
+    { label: "SpDEF Ascending", value: "SpDEF Ascending", func: handleSortSpDEFAsc },
+  ];
+
   useEffect(() => {
-    setPokemonDt(PokemonDt);
-  });
+    setPokemonDt(PokemonData);
+  }, []);
 
   // Handle sort data functions
   // Sort by HP
   function handleSortHPDesc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.Hp > b.baseStats.Hp ? 1 : -1;
     });
     setPokemonDt(sortedData);
   }
   function handleSortHPAsc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.Hp < b.baseStats.Hp ? 1 : -1;
     });
     setPokemonDt(sortedData);
@@ -28,13 +43,13 @@ const PokeCard = () => {
 
   // Sort by ATK
   function handleSortATKDesc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.ATK > b.baseStats.ATK ? 1 : -1;
     });
     setPokemonDt(sortedData);
   }
   function handleSortATKAsc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.ATK < b.baseStats.ATK ? 1 : -1;
     });
     setPokemonDt(sortedData);
@@ -42,13 +57,13 @@ const PokeCard = () => {
 
   // Sort by SPATK
   function handleSortSpATKDesc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.SpATK > b.baseStats.SpATK ? 1 : -1;
     });
     setPokemonDt(sortedData);
   }
   function handleSortSpATKAsc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.SpATK < b.baseStats.SpATK ? 1 : -1;
     });
     setPokemonDt(sortedData);
@@ -56,13 +71,13 @@ const PokeCard = () => {
 
   // Sort by DEF
   function handleSortDEFDesc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.DEF > b.baseStats.DEF ? 1 : -1;
     });
     setPokemonDt(sortedData);
   }
   function handleSortDEFAsc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.DEF < b.baseStats.DEF ? 1 : -1;
     });
     setPokemonDt(sortedData);
@@ -70,13 +85,13 @@ const PokeCard = () => {
 
   // Sort by SPDEF
   function handleSortSpDEFDesc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.SpDEF > b.baseStats.SpDEF ? 1 : -1;
     });
     setPokemonDt(sortedData);
   }
   function handleSortSpDEFAsc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.SpDEF < b.baseStats.SpDEF ? 1 : -1;
     });
     setPokemonDt(sortedData);
@@ -84,13 +99,13 @@ const PokeCard = () => {
 
   // Sort by SPEED
   function handleSortSpeedDesc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.Speed > b.baseStats.Speed ? 1 : -1;
     });
     setPokemonDt(sortedData);
   }
   function handleSortSpeedAsc() {
-    const sortedData = [...PokemonDt].sort((a, b) => {
+    const sortedData = PokemonDt.slice().sort((a, b) => {
       return a.baseStats.Speed < b.baseStats.Speed ? 1 : -1;
     });
     setPokemonDt(sortedData);
@@ -98,86 +113,72 @@ const PokeCard = () => {
 
   // Filter data function
   const filterTeam = (team) => {
-    setPokemonDt(PokemonData.filter((pokeTeam) => pokeTeam.team === team));
+    if (team === "All") {
+      setPokemonDt(PokemonData);
+    } else {
+      setPokemonDt(PokemonData.filter((pokeTeam) => pokeTeam.team === team));
+    }
   };
 
   return (
-    <section className="grid gap-4">
+    <section className="grid gap-2 items-center justify-center">
       {/* Searching Data */}
 
       {/* Filtering Data */}
-      <div>
-        <select defaultValue={"All"}>
-          {/* Sort by Team */}
-          <option value="disable" disabled>
-            Select Team ...
-          </option>
-          <option value="All" onClick={() => setPokemonDt(PokemonData)} className="cursor-pointer">
-            All
-          </option>
-          <option value="electric" onClick={() => filterTeam("electric")} className="cursor-pointer">
-            Electric
-          </option>
-          <option value="poison" onClick={() => filterTeam("poison")} className="cursor-pointer">
-            Poison
-          </option>
-          <option value="water" onClick={() => filterTeam("water")} className="cursor-pointer">
-            Water
-          </option>
-          <option value="fire" onClick={() => filterTeam("fire")} className="cursor-pointer">
-            Fire
-          </option>
-          <option value="dragon" onClick={() => filterTeam("dragon")} className="cursor-pointer">
-            Dragon
-          </option>
-          <option value="universal" onClick={() => filterTeam("universal")} className="cursor-pointer">
-            Universal
-          </option>
-          <option value="special" onClick={() => filterTeam("special")} className="cursor-pointer">
-            Special
-          </option>
+      <div className="flex items-center justify-center gap-2">
+        <div className="border ">
+          <select defaultValue={"All"} onChange={(e) => filterTeam(e.target.value)}>
+            {/* Sort by Team */}
+            <option value="disable" disabled>
+              Select Team ...
+            </option>
+            <option value="All" className="cursor-pointer">
+              All
+            </option>
+            <option value="electric" className="cursor-pointer">
+              Electric
+            </option>
+            <option value="poison" className="cursor-pointer">
+              Poison
+            </option>
+            <option value="water" className="cursor-pointer">
+              Water
+            </option>
+            <option value="fire" className="cursor-pointer">
+              Fire
+            </option>
+            <option value="dragon" className="cursor-pointer">
+              Dragon
+            </option>
+            <option value="universal" className="cursor-pointer">
+              Universal
+            </option>
+            <option value="special" className="cursor-pointer">
+              Special
+            </option>
+          </select>
+        </div>
 
-          {/* Sort by BaseStats */}
-          <option value="disable" disabled>
-            Sort by ...
-          </option>
-          <option value="HP" onClick={handleSortHPDesc} className="cursor-pointer">
-            <span>HP ↓</span>
-          </option>
-          <option value="HP" onClick={handleSortHPAsc} className="cursor-pointer">
-            <span>HP ↑</span>
-          </option>
-          <option value="ATK" onClick={handleSortATKDesc} className="cursor-pointer">
-            <span>ATK ↓</span>
-          </option>
-          <option value="ATK" onClick={handleSortATKAsc} className="cursor-pointer">
-            <span>ATK ↑</span>
-          </option>
-          <option value="SpATK" onClick={handleSortSpATKDesc} className="cursor-pointer">
-            <span>SpATK ↓</span>
-          </option>
-          <option value="SpATK" onClick={handleSortSpATKAsc} className="cursor-pointer">
-            <span>SpATK ↑</span>
-          </option>
-          <option value="DEF" onClick={handleSortDEFDesc} className="cursor-pointer">
-            <span>DEF ↓</span>
-          </option>
-          <option value="DEF" onClick={handleSortDEFAsc} className="cursor-pointer">
-            <span>DEF ↑</span>
-          </option>
-          <option value="SpDEF" onClick={handleSortSpDEFDesc} className="cursor-pointer">
-            <span>SpDEF ↓</span>
-          </option>
-          <option value="SpDEF" onClick={handleSortSpDEFAsc} className="cursor-pointer">
-            <span>SpDEF ↑</span>
-          </option>
-          <option value="Speed" onClick={handleSortSpeedDesc} className="cursor-pointer">
-            <span>Speed ↓</span>
-          </option>
-          <option value="Speed" onClick={handleSortSpeedAsc} className="cursor-pointer">
-            <span>Speed ↑</span>
-          </option>
-        </select>
+        {/* Sort by BaseStats */}
+        <div className="border ">
+          <select
+            onChange={(e) => {
+              const selectedOption = sortingOptions.find((option) => option.value === e.target.value);
+              if (selectedOption) {
+                selectedOption.func();
+              }
+            }}
+          >
+            <option value="" disabled selected>
+              Sort by ⇅
+            </option>
+            {sortingOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {/* Display Mapping Data */}
