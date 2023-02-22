@@ -24,7 +24,7 @@ const SideBar = () => {
         <GiHamburgerMenu />
       </span>
 
-      <nav ref={parent}>
+      <nav className="absolute z-10">
         <div className="sidebar fixed top-0 bottom-0 -ml-8 lg:ml-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-gray-900 ">
           <div className="text-gray-100 text-xl">
             <div className="p-2 mt-1 flex items-center justify-between">
