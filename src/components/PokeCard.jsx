@@ -1,51 +1,104 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PokemonData } from "../data/pokemonData";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { colors } from "../utils/colorsClass";
 
 const PokeCard = () => {
   const [PokemonDt, setPokemonDt] = useState(PokemonData);
   const [parent] = useAutoAnimate();
-  let colors = [
-    "bg-normal" == "bg-normal",
-    "bg-normal2" == "bg-normal2",
-    "bg-fire" == "bg-fire",
-    "bg-fire2" == "bgfire2",
-    "bg-water" == "bg-water",
-    "bg-water2 == bg-water2",
-    "bg-electric" == "bg-electric",
-    "bg-electric2" == "bg-electric2",
-    "bg-grass" == "bg-grass",
-    "bg-grass2" == "bg-grass2",
-    "bg-ice" == "bg-ice",
-    "bg-ice2" == "bg-ice2",
-    "bg-fighting" == "bg-fighting",
-    "bg-fighting2" == "bg-fighting2",
-    "bg-poison" == "bg-poison",
-    "bg-poison2" == "bg-poison2",
-    "bg-ground" == "bg-ground",
-    "bg-ground2" == "bg-ground2",
-    "bg-flying" == "bg-flying",
-    "bg-flying2" == "bg-flying2",
-    "bg-psychic" == "bg-psychic",
-    "bg-psychic2" == "bg-psychic2",
-    "bg-bug" == "bg-bug",
-    "bg-bug2" == "bg-bug2",
-    "bg-rock" == "bg-rock",
-    "bg-rock2" == "bg-rock2",
-    "bg-ghost" == "bg-ghost",
-    "bg-ghost2" == "bg-ghost2",
-    "bg-dragon" == "bg-dragon",
-    "bg-dragon2" == "bg-dragon2",
-    "bg-dark" == "bg-dark",
-    "bg-dark2" == "bg-dark2",
-    "bg-steel" == "bg-steel",
-    "bg-steel2" == "bg-steel2",
-    "bg-fairy" == "bg-fairy",
-    "bg-fairy2" == "bg-fairy2",
-  ];
 
-  const filter = (origin) => {
-    setPokemonDt(PokemonData.filter((pokeOrigin) => pokeOrigin.origin === origin));
+  useEffect(() => {
+    setPokemonDt(PokemonDt);
+  });
+
+  // Handle sort data functions
+  // Sort by HP
+  function handleSortHPDesc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.Hp > b.baseStats.Hp ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+  function handleSortHPAsc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.Hp < b.baseStats.Hp ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+
+  // Sort by ATK
+  function handleSortATKDesc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.ATK > b.baseStats.ATK ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+  function handleSortATKAsc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.ATK < b.baseStats.ATK ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+
+  // Sort by SPATK
+  function handleSortSpATKDesc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.SpATK > b.baseStats.SpATK ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+  function handleSortSpATKAsc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.SpATK < b.baseStats.SpATK ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+
+  // Sort by DEF
+  function handleSortDEFDesc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.DEF > b.baseStats.DEF ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+  function handleSortDEFAsc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.DEF < b.baseStats.DEF ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+
+  // Sort by SPDEF
+  function handleSortSpDEFDesc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.SpDEF > b.baseStats.SpDEF ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+  function handleSortSpDEFAsc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.SpDEF < b.baseStats.SpDEF ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+
+  // Sort by SPEED
+  function handleSortSpeedDesc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.Speed > b.baseStats.Speed ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+  function handleSortSpeedAsc() {
+    const sortedData = [...PokemonDt].sort((a, b) => {
+      return a.baseStats.Speed < b.baseStats.Speed ? 1 : -1;
+    });
+    setPokemonDt(sortedData);
+  }
+
+  // Filter data function
+  const filterTeam = (team) => {
+    setPokemonDt(PokemonData.filter((pokeTeam) => pokeTeam.team === team));
   };
 
   return (
@@ -54,24 +107,81 @@ const PokeCard = () => {
 
       {/* Filtering Data */}
       <div>
-        Select Type:
-        <select name="" subject="">
-          <option value="" selected="selected" onClick={() => setPokemonDt(PokemonData)}>
+        <select defaultValue={"All"}>
+          {/* Sort by Team */}
+          <option value="disable" disabled>
+            Select Team ...
+          </option>
+          <option value="All" onClick={() => setPokemonDt(PokemonData)} className="cursor-pointer">
             All
           </option>
-          <option value="" selected="selected" onClick={() => filter("steel")}>
-            Steel
+          <option value="electric" onClick={() => filterTeam("electric")} className="cursor-pointer">
+            Electric
           </option>
-          <option value="" selected="selected" onClick={() => filter("fire")}>
+          <option value="poison" onClick={() => filterTeam("poison")} className="cursor-pointer">
+            Poison
+          </option>
+          <option value="water" onClick={() => filterTeam("water")} className="cursor-pointer">
+            Water
+          </option>
+          <option value="fire" onClick={() => filterTeam("fire")} className="cursor-pointer">
             Fire
+          </option>
+          <option value="dragon" onClick={() => filterTeam("dragon")} className="cursor-pointer">
+            Dragon
+          </option>
+          <option value="universal" onClick={() => filterTeam("universal")} className="cursor-pointer">
+            Universal
+          </option>
+          <option value="special" onClick={() => filterTeam("special")} className="cursor-pointer">
+            Special
+          </option>
+
+          {/* Sort by BaseStats */}
+          <option value="disable" disabled>
+            Sort by ...
+          </option>
+          <option value="HP" onClick={handleSortHPDesc} className="cursor-pointer">
+            <span>HP ↓</span>
+          </option>
+          <option value="HP" onClick={handleSortHPAsc} className="cursor-pointer">
+            <span>HP ↑</span>
+          </option>
+          <option value="ATK" onClick={handleSortATKDesc} className="cursor-pointer">
+            <span>ATK ↓</span>
+          </option>
+          <option value="ATK" onClick={handleSortATKAsc} className="cursor-pointer">
+            <span>ATK ↑</span>
+          </option>
+          <option value="SpATK" onClick={handleSortSpATKDesc} className="cursor-pointer">
+            <span>SpATK ↓</span>
+          </option>
+          <option value="SpATK" onClick={handleSortSpATKAsc} className="cursor-pointer">
+            <span>SpATK ↑</span>
+          </option>
+          <option value="DEF" onClick={handleSortDEFDesc} className="cursor-pointer">
+            <span>DEF ↓</span>
+          </option>
+          <option value="DEF" onClick={handleSortDEFAsc} className="cursor-pointer">
+            <span>DEF ↑</span>
+          </option>
+          <option value="SpDEF" onClick={handleSortSpDEFDesc} className="cursor-pointer">
+            <span>SpDEF ↓</span>
+          </option>
+          <option value="SpDEF" onClick={handleSortSpDEFAsc} className="cursor-pointer">
+            <span>SpDEF ↑</span>
+          </option>
+          <option value="Speed" onClick={handleSortSpeedDesc} className="cursor-pointer">
+            <span>Speed ↓</span>
+          </option>
+          <option value="Speed" onClick={handleSortSpeedAsc} className="cursor-pointer">
+            <span>Speed ↑</span>
           </option>
         </select>
       </div>
 
-      {/* Sorting Data */}
-
-      {/* Mapping Data */}
-      <div ref={parent}>
+      {/* Display Mapping Data */}
+      <div ref={parent} className="relative z-0">
         {PokemonDt.map((pokemon, index) => (
           <div key={index} className={`border rounded-md w-[300px] flex flex-row bg-${pokemon.origin}`}>
             <div className="w-7/12 mr-1">
@@ -84,7 +194,7 @@ const PokeCard = () => {
                 <div className="flex justify-between gap-2">
                   {pokemon.types.map((type, index) => {
                     return (
-                      <div key={index} className="border border-gray-400 rounded-md px-4">
+                      <div key={index} className="border grow border-gray-800 rounded-md px-4">
                         {type}
                       </div>
                     );
