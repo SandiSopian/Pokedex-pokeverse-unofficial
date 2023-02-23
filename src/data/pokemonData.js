@@ -24,7 +24,7 @@ export const PokemonData = [
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     flash: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     extremeTraining: {
-      stage: "5",
+      stage: "Stage 5",
       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     },
     source: ["Island IV", "Island V", "Shop", "World Gym"],
@@ -51,34 +51,37 @@ export const PokemonData = [
     skillInfo: {
       ohko: {
         name: "Thunder Punch",
+        skillType: "electric",
         energy: "-2",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       overheat: {
         name: "Shock Wave",
+        skillType: "electric",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       normal: {
         name: "Lighting Attack",
+        skillType: "electric",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
-    Talent: {
+    talent: {
       floor2: {
         name: "Floor 2 - Talent Skill (3)",
-        energy: "3",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3a: {
         name: "Floor 3 - Talent Skill (1)",
-        energy: "1",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3b: {
         name: "Floor 3 - Talent Skill (2)",
-        energy: "0",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
@@ -100,7 +103,7 @@ export const PokemonData = [
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     flash: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     extremeTraining: {
-      stage: "5",
+      stage: "Stage 5",
       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     },
     source: ["Island IV", "Island V", "Shop", "World Gym"],
@@ -127,34 +130,37 @@ export const PokemonData = [
     skillInfo: {
       ohko: {
         name: "Solar Beam",
+        skillType: "grass",
         energy: "-3",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       overheat: {
         name: "Growth",
+        skillType: "grass",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       normal: {
         name: "Venoshock",
+        skillType: "poison",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
-    Talent: {
+    talent: {
       floor2: {
         name: "Floor 2 - Talent Skill (3)",
-        energy: "3",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3a: {
         name: "Floor 3 - Talent Skill (1)",
-        energy: "1",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3b: {
         name: "Floor 3 - Talent Skill (2)",
-        energy: "0",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
@@ -176,7 +182,7 @@ export const PokemonData = [
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     flash: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     extremeTraining: {
-      stage: "5",
+      stage: "Stage 5",
       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     },
     source: ["Island IV", "Island V", "Shop", "World Gym"],
@@ -203,34 +209,37 @@ export const PokemonData = [
     skillInfo: {
       ohko: {
         name: "Blizzard",
+        skillType: "water",
         energy: "-3",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       overheat: {
         name: "Mist",
+        skillType: "water",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       normal: {
         name: "Ice Fang",
+        skillType: "water",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
-    Talent: {
+    talent: {
       floor2: {
         name: "Floor 2 - Talent Skill (3)",
-        energy: "3",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3a: {
         name: "Floor 3 - Talent Skill (1)",
-        energy: "1",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3b: {
         name: "Floor 3 - Talent Skill (2)",
-        energy: "0",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
@@ -252,13 +261,13 @@ export const PokemonData = [
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     flash: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     extremeTraining: {
-      stage: "5",
+      stage: "Stage 5",
       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     },
     source: ["Island IV", "Island V", "Shop", "World Gym"],
     img: MCX,
     evolutions: {
-      img: "",
+      img: MCX,
       name: "Charizard",
       type: "fire",
     },
@@ -279,34 +288,37 @@ export const PokemonData = [
     skillInfo: {
       ohko: {
         name: "Blast Burn",
+        skillType: "fire",
         energy: "-3",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       overheat: {
         name: "Flame Burst",
+        skillType: "fire",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       normal: {
         name: "Flare Blitz",
+        skillType: "fire",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
-    Talent: {
+    talent: {
       floor2: {
         name: "Floor 2 - Talent Skill (3)",
-        energy: "3",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3a: {
         name: "Floor 3 - Talent Skill (1)",
-        energy: "1",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3b: {
         name: "Floor 3 - Talent Skill (2)",
-        energy: "0",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
@@ -314,7 +326,7 @@ export const PokemonData = [
   // ==============================================================
   // Dragon Team
   {
-    id: "4",
+    id: "5",
     name: "Rayquaza",
     team: "dragon",
     position: "state",
@@ -328,7 +340,7 @@ export const PokemonData = [
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     flash: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     extremeTraining: {
-      stage: "5",
+      stage: "Stage 5",
       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     },
     source: ["Island IV", "Island V", "Shop", "World Gym"],
@@ -355,34 +367,37 @@ export const PokemonData = [
     skillInfo: {
       ohko: {
         name: "Hyper Beam",
+        skillType: "normal",
         energy: "-3",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       overheat: {
         name: "Twister",
+        skillType: "dragon",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       normal: {
         name: "Air Slash",
+        skillType: "flying",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
-    Talent: {
+    talent: {
       floor2: {
         name: "Floor 2 - Talent Skill (3)",
-        energy: "3",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3a: {
         name: "Floor 3 - Talent Skill (1)",
-        energy: "1",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3b: {
         name: "Floor 3 - Talent Skill (2)",
-        energy: "0",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
@@ -390,7 +405,7 @@ export const PokemonData = [
   // ==============================================================
   // Universal
   {
-    id: "5",
+    id: "6",
     name: "Lugia",
     team: "universal",
     position: "DEF",
@@ -404,7 +419,7 @@ export const PokemonData = [
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     flash: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     extremeTraining: {
-      stage: "5",
+      stage: "Stage 5",
       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     },
     source: ["Island IV", "Island V", "Shop", "World Gym"],
@@ -431,34 +446,37 @@ export const PokemonData = [
     skillInfo: {
       ohko: {
         name: "Safeguard",
+        skillType: "psychic",
         energy: "-3",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       overheat: {
         name: "Aeroblast",
+        skillType: "flying",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       normal: {
         name: "Fly",
+        skillType: "flying",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
-    Talent: {
+    talent: {
       floor2: {
         name: "Floor 2 - Talent Skill (3)",
-        energy: "3",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3a: {
         name: "Floor 3 - Talent Skill (1)",
-        energy: "1",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3b: {
         name: "Floor 3 - Talent Skill (2)",
-        energy: "0",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
@@ -466,7 +484,7 @@ export const PokemonData = [
   // ==============================================================
   // Special
   {
-    id: "6",
+    id: "7",
     name: "Ditto",
     team: "special",
     position: "",
@@ -480,7 +498,7 @@ export const PokemonData = [
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     flash: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     extremeTraining: {
-      stage: "5",
+      stage: "Stage 5",
       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     },
     source: ["Island IV", "Island V", "Shop", "World Gym"],
@@ -507,34 +525,37 @@ export const PokemonData = [
     skillInfo: {
       ohko: {
         name: "Bubble",
+        skillType: "normal",
         energy: "-3",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       overheat: {
         name: "Bubble",
+        skillType: "normal",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       normal: {
         name: "Bubble",
+        skillType: "normal",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
-    Talent: {
+    talent: {
       floor2: {
         name: "Floor 2 - Talent Skill (3)",
-        energy: "3",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3a: {
         name: "Floor 3 - Talent Skill (1)",
-        energy: "1",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3b: {
         name: "Floor 3 - Talent Skill (2)",
-        energy: "0",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
@@ -542,7 +563,7 @@ export const PokemonData = [
   // ==============================================================
   // Soul Link
   {
-    id: "7",
+    id: "8",
     name: "Original Kyogre",
     team: "water",
     position: "Output",
@@ -556,7 +577,7 @@ export const PokemonData = [
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     flash: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     extremeTraining: {
-      stage: "5",
+      stage: "Stage 5",
       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
     },
     source: ["Island IV", "Island V", "Shop", "World Gym"],
@@ -583,34 +604,37 @@ export const PokemonData = [
     skillInfo: {
       ohko: {
         name: "Ice Soul",
+        skillType: "water",
         energy: "-3",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       overheat: {
         name: "Aqua Ring",
+        skillType: "water",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       normal: {
         name: "Origin Pulse",
+        skillType: "water",
         energy: "+1",
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },
-    Talent: {
+    talent: {
       floor2: {
         name: "Floor 2 - Talent Skill (3)",
-        energy: "3",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3a: {
         name: "Floor 3 - Talent Skill (1)",
-        energy: "1",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
       floor3b: {
         name: "Floor 3 - Talent Skill (2)",
-        energy: "0",
+
         skillDesc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non aperiam officiis magni nam ut blanditiis harum doloremque ipsum perspiciatis earum",
       },
     },

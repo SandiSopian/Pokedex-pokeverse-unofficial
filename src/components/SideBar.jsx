@@ -20,11 +20,11 @@ const SideBar = () => {
   const [parent] = useAutoAnimate();
   return (
     <>
-      <span className="absolute z-20 text-4xl top-5 left-4 cursor-pointer" onClick={toggleMenuBar}>
+      <span className="absolute z-10 text-4xl top-5 left-4 cursor-pointer" onClick={toggleMenuBar}>
         <GiHamburgerMenu />
       </span>
 
-      <nav className="absolute z-10 pl-8">
+      <nav className="absolute z-20 pl-8">
         <div className="sidebar fixed top-0 bottom-0 -ml-8 lg:ml-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-gray-900 ">
           <div className="text-gray-100 text-xl">
             <div className="p-2 mt-1 flex items-center justify-between">
