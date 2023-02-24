@@ -11,3 +11,12 @@
     @apply p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-gray-700 text-white;
   }
 }
+
+body {
+  background: url("/src/assets//images/bg-img/bg-img.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5);
+}

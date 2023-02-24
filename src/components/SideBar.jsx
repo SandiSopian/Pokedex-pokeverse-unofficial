@@ -15,6 +15,7 @@ import dropdown from "../utils/dropdown";
 import toggleMenuBar from "../utils/toggleMenuBar";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { NavLink } from "react-router-dom";
+import logoImg from "../assets/svg/pokeball-logo.svg";
 
 const SideBar = () => {
   const [parent] = useAutoAnimate();
@@ -24,13 +25,23 @@ const SideBar = () => {
         <GiHamburgerMenu />
       </span>
 
+      <span className="absolute z-10 top-6 right-8 flex items-center  md:hidden">
+        <h1 className="font-bold text-xl">
+          <span className="text-red-600">POKÉV</span>
+          Dex
+        </h1>
+      </span>
+
       <nav className="absolute z-20 pl-8">
         <div className="sidebar fixed top-0 bottom-0 -ml-8 lg:ml-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-gray-900 ">
           <div className="text-gray-100 text-xl">
             <div className="p-2 mt-1 flex items-center justify-between">
-              <h1 className="font-bold text-gray-50 text-xl ml-3">
+              <h1 className="font-bold text-gray-50 text-xl ml-3 flex items-center">
                 <span className="text-red-600">POKÉV</span>
                 Dex
+                <span className="ml-2">
+                  <img src={logoImg} alt="logo pokedex" />
+                </span>
               </h1>
               <RxCross1 className="cursor-pointer lg:hidden" onClick={toggleMenuBar} />
             </div>
