@@ -2,7 +2,7 @@ import React from "react";
 import ZCrystalDetail from "../components/ZCrystalDetail";
 import Layout from "../layouts/Layout";
 
-const Tms = () => {
+const ZCrystal = () => {
   return (
     <Layout>
       <div>
@@ -12,4 +12,4 @@ const Tms = () => {
   );
 };
 
-export default Tms;
+export default ZCrystal;

@@ -81,8 +81,8 @@ function PokeDetail() {
       <div className="relative z-0 mt-6 flex flex-col justify-center items-center">
         {/* Pokemon Description */}
         <h1 className="text-lg font-bold mb-2">Description</h1>
-        <div className="border rounded-md w-[300px] flex flex-row bg-white p-3 ">
-          <div className="p-2 border rounded-md">{thisPokemon.description}</div>
+        <div className="rounded-md w-[300px] bg-white p-3">
+          <div className="p-2 border">{thisPokemon.description}</div>
         </div>
       </div>
     );
@@ -94,7 +94,7 @@ function PokeDetail() {
       <div className="relative z-0 mt-6 flex flex-col justify-center items-center">
         {/* Pokemon Role */}
         <h1 className="text-lg font-bold mb-2">Role</h1>
-        <div className="border rounded-md w-[300px] flex flex-row justify-center bg-white p-3">
+        <div className="rounded-md w-[300px] flex flex-row justify-center bg-white p-3">
           <div className="p-4 border rounded-md flex flex-col gap-4">
             <div className="flex flex-wrap gap-2">
               {thisPokemon.role.map((roles, index) => {
@@ -118,7 +118,7 @@ function PokeDetail() {
       <div className="relative z-0 mt-6 flex flex-col justify-center items-center">
         {/* Pokemon Flash */}
         <h1 className="text-lg font-bold mb-2">Flash</h1>
-        <div className="border rounded-md w-[300px] flex flex-row bg-white p-3 ">
+        <div className="rounded-md w-[300px] bg-white p-3 ">
           <div className="p-2 border rounded-md">{thisPokemon.flash}</div>
         </div>
       </div>
@@ -133,7 +133,7 @@ function PokeDetail() {
         <h1 className="text-lg font-bold mb-2">Skills Overview</h1>
         <div className="flex flex-col gap-2">
           {/* OHKO */}
-          <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+          <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
             <div className={`bg-${thisPokemon.skillInfo.ohko.skillType} p-2 border rounded-md capitalize`}>{thisPokemon.skillInfo.ohko.skillType}</div>
             <div className="flex justify-between ">
               <div className={`bg-${thisPokemon.skillInfo.ohko.skillType} p-2 border rounded-md`}>{thisPokemon.skillInfo.ohko.name}</div>
@@ -143,7 +143,7 @@ function PokeDetail() {
           </div>
 
           {/* OVERHEAT */}
-          <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+          <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
             <div className={`bg-${thisPokemon.skillInfo.overheat.skillType} p-2 border rounded-md capitalize`}>{thisPokemon.skillInfo.overheat.skillType}</div>
             <div className="flex justify-between ">
               <div className={`bg-${thisPokemon.skillInfo.overheat.skillType} p-2 border rounded-md`}>{thisPokemon.skillInfo.overheat.name}</div>
@@ -153,7 +153,7 @@ function PokeDetail() {
           </div>
 
           {/* NORMAL */}
-          <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+          <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
             <div className={`bg-${thisPokemon.skillInfo.normal.skillType} p-2 border rounded-md capitalize`}>{thisPokemon.skillInfo.normal.skillType}</div>
             <div className="flex justify-between ">
               <div className={`bg-${thisPokemon.skillInfo.normal.skillType} p-2 border rounded-md`}>{thisPokemon.skillInfo.normal.name}</div>
@@ -175,19 +175,19 @@ function PokeDetail() {
 
         <div className="flex flex-col gap-2">
           {/* Floor 2 */}
-          <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+          <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
             <div className=" p-2 border bg-slate-400 rounded-md">{thisPokemon.talent.floor2.name}</div>
             <div className="p-2 border rounded-md">{thisPokemon.talent.floor2.skillDesc}</div>
           </div>
 
           {/* Floor 3a */}
-          <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+          <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
             <div className=" p-2 border bg-slate-400 rounded-md">{thisPokemon.talent.floor3a.name}</div>
             <div className="p-2 border rounded-md">{thisPokemon.talent.floor3a.skillDesc}</div>
           </div>
 
           {/* Floor 3b */}
-          <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+          <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
             <div className=" p-2 border bg-slate-400 rounded-md">{thisPokemon.talent.floor3b.name}</div>
             <div className="p-2 border rounded-md">{thisPokemon.talent.floor3b.skillDesc}</div>
           </div>
@@ -203,7 +203,7 @@ function PokeDetail() {
         {/* Pokemon Extreme Training */}
         <h1 className="text-lg font-bold mb-2">Extreme Training</h1>
         <div className="flex flex-col gap-2">
-          <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+          <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
             <div className="p-2 border bg-slate-400 rounded-md">{thisPokemon.extremeTraining.stage}</div>
             <div className="p-2 border rounded-md capitalize">{thisPokemon.extremeTraining.description}</div>
           </div>
@@ -218,7 +218,7 @@ function PokeDetail() {
       <div className="relative z-0 mt-6 flex flex-col justify-center items-center">
         {/* Pokemon Source */}
         <h1 className="text-lg font-bold mb-2">Source</h1>
-        <div className="border rounded-md w-[300px] flex flex-row justify-center bg-white p-3">
+        <div className="rounded-md w-[300px] flex flex-row justify-center bg-white p-3">
           <div className="p-4 border rounded-md flex flex-col gap-4">
             <div className="flex flex-wrap gap-2">
               {thisPokemon.source.map((sources, index) => {
@@ -243,7 +243,7 @@ function PokeDetail() {
           {/* Pokemon Evolutions */}
           <h1 className="text-lg font-bold mb-2">Evolution Chain</h1>
           <div className="flex flex-col gap-2">
-            <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+            <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
               <img src={thisPokemon.evolutions.img} alt={thisPokemon.evolutions.name} className="pl-5 pr-2 w-[50%] mx-auto" />
               <div className="p-2 border bg-slate-400 rounded-md">{thisPokemon.evolutions.name}</div>
               <div className={`bg-${thisPokemon.evolutions.type} p-2 border rounded-md capitalize`}>{thisPokemon.evolutions.type}</div>
@@ -262,7 +262,7 @@ function PokeDetail() {
           <h1 className="text-lg font-bold mb-2">Dynamax Introductions</h1>
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
             {/* Unlock */}
-            <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+            <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
               <div className="p-2 border bg-slate-400 rounded-md">{thisPokemon.dynamax.dynamaxUnlock.name}</div>
               <div>
                 <div className="p-2 border rounded-md">
@@ -297,7 +297,7 @@ function PokeDetail() {
             </div>
 
             {/* ATK */}
-            <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+            <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
               <div className="p-2 border bg-slate-400 rounded-md">{thisPokemon.dynamax.dynamaxATK.name}</div>
               <div>
                 <div className="p-2 border rounded-md">
@@ -344,7 +344,7 @@ function PokeDetail() {
             </div>
 
             {/* DEF */}
-            <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+            <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
               <div className="p-2 border bg-slate-400 rounded-md">{thisPokemon.dynamax.dynamaxDEF.name}</div>
               <div>
                 <div className="p-2 border rounded-md">
@@ -391,7 +391,7 @@ function PokeDetail() {
             </div>
 
             {/* Exclusive */}
-            <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+            <div className="rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
               <div className="p-2 border bg-slate-400 rounded-md">{thisPokemon.dynamax.dynamaxExclusive.name}</div>
               <div>
                 <div className="p-2 border rounded-md">
