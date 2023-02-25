@@ -8,6 +8,9 @@ const PokeCard = () => {
   const [pokemonDt, setPokemonDt] = useState(PokemonData);
   const [parent] = useAutoAnimate();
 
+  const [searchTerm, setSearchTerm] = useState("");
+  const filteredPokemon = pokemonDt.filter((pokemon) => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
   const sortingOptions = [
     { label: "Default", value: "Default", func: handleSortById },
     { label: "HP ⇩", value: "HP Descending", func: handleSortHPDesc },
@@ -143,10 +146,13 @@ const PokeCard = () => {
   return (
     <section className="grid gap-2 items-center justify-center mt-16">
       {/* Searching Data */}
+      <div className="lg:-ml-[242px] xl:-ml-[435px]">
+        <input type="text" value={searchTerm} placeholder="Search Pokemon..." onChange={(e) => setSearchTerm(e.target.value)} className="w-[152px]" />
+      </div>
 
       {/*=====Filtering Data=====*/}
-      <div className="flex items-center justify-center gap-2 lg:-ml-28 xl:-ml-80">
-        <div className="border">
+      <div className="flex items-center justify-center gap-2 lg:-ml-28 xl:-ml-[305px]">
+        <div>
           {/* Sort by Team */}
           <select onChange={(e) => filterTeam(e.target.value)}>
             <option value="disable" disabled>
@@ -160,7 +166,7 @@ const PokeCard = () => {
           </select>
         </div>
 
-        <div className="border ">
+        <div>
           {/*Sort by BaseStats*/}
           <select
             onChange={(e) => {
@@ -184,9 +190,9 @@ const PokeCard = () => {
 
       {/*=====Display Mapping Data=====*/}
       <div ref={parent} className="relative z-0 md:grid md:grid-cols-2 xl:grid-cols-3 lg:ml-56 xl:ml-72 2xl:ml-32 2xl:-mr-32 ">
-        {pokemonDt.map((pokemon) => (
+        {filteredPokemon.map((pokemon) => (
           <div key={pokemon.id}>
-            <Link to={`/pokemon/${pokemon.id}`} className={`drop-shadow-2xl rounded-md overflow-hidden w-[300px] flex flex-row my-3 md:mx-3 bg-${pokemon.rarity}`}>
+            <Link to={`/pokemon/${pokemon.id}`} className={`transition-all duration-1000 transform hover:-translate-y-2 drop-shadow-2xl rounded-md overflow-hidden w-[300px] flex flex-row my-3 md:mx-3 bg-${pokemon.rarity}`}>
               <div className="w-7/12 mr-1">
                 <div className="container p-3 flex flex-col gap-1">
                   <div className="font-semibold">{pokemon.name}</div>
