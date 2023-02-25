@@ -49,28 +49,24 @@ const SideBar = () => {
           </div>
 
           {/* Components Tab */}
-          <div className="sideBarSearchTab">
-            <BiSearchAlt2 />
-            <input type="text" className="text-sm ml-4 w-full bg-transparent focus:outline-none" placeholder="Search" />
-          </div>
 
           <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/">
             <TbPokeball />
             <span className="text-sm ml-4 text-gray-200">Pokemon</span>
           </NavLink>
-          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs " : "sideBarTabs font-normal")} to="/">
+          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/tms">
             <FaCompactDisc />
             <span className="text-sm ml-4 text-gray-200">TM</span>
           </NavLink>
-          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs " : "sideBarTabs font-normal")} to="/">
+          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/held items">
             <BsScrewdriver />
             <span className="text-sm ml-4 text-gray-200">Held Items</span>
           </NavLink>
-          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs " : "sideBarTabs font-normal")} to="/">
+          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/z-crystal">
             <SiCrystal />
             <span className="text-sm ml-4 text-gray-200">Z-Crystal</span>
           </NavLink>
-          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs " : "sideBarTabs font-normal")} to="/">
+          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/nature">
             <FaMask />
             <span className="text-sm ml-4 text-gray-200">Nature</span>
           </NavLink>
@@ -85,11 +81,11 @@ const SideBar = () => {
           </div>
 
           <div className="text-left text-sm mt-2 w-4/5 mx-auto text-white hidden" id="submenu">
-            <h1 className="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1 ml-3">
-              <div className="flex gap-2 items-center">
+            <h1 className="cursor-pointer rounded-md mt-1 ml-3">
+              <NavLink className={({ isActive }) => (isActive ? "sideBarTabs flex gap-2 items-center bg-gray-400" : "sideBarTabs font-normal flex gap-2 items-center")} to="/plate">
                 <GiDividedSquare />
                 <span>Plate</span>
-              </div>
+              </NavLink>
             </h1>
           </div>
 
