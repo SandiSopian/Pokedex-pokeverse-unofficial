@@ -20,8 +20,8 @@ function PokeDetail() {
   // =====Pokemon Card Function=====
   function pokeCardTemp() {
     return (
-      <div className="relative z-0 flex flex-col justify-center items-center">
-        <div className={`drop-shadow-2xl rounded-md overflow-hidden w-[300px] flex flex-row bg-${thisPokemon.rarity}`}>
+      <div className="relative z-0 flex flex-col justify-center items-center ">
+        <div className={`drop-shadow-2xl rounded-md overflow-hidden w-[300px] flex flex-row bg-${thisPokemon.rarity} `}>
           <div className="w-7/12 mr-1">
             <div className="container p-3 flex flex-col gap-1">
               <div className="font-semibold">{thisPokemon.name}</div>
@@ -61,7 +61,7 @@ function PokeDetail() {
                   <div className="text-sm font-medium text-gray-900">{item.name}</div>
                   <div className="text-sm text-gray-500">{item.value}</div>
                 </div>
-                <div className="relative mt-2 h-6 flex flex-col bg-gray-100 rounded-full overflow-hidden">
+                <div className="relative mt-2 h-5 flex flex-col bg-gray-100 rounded-full overflow-hidden">
                   <div className={`absolute inset-y-0 left-0 ${item.color} rounded-full`} style={{ width: `${item.value * 0.5}%` }} />
                   <div className="flex justify-end items-center h-full pr-2">
                     <div className="text-right text-xs font-medium text-gray-400">{item.label}</div>
@@ -235,7 +235,7 @@ function PokeDetail() {
     );
   }
 
-  // =====Pokemon Source=====
+  // =====Pokemon Evolutions=====
   function pokeEvolutions(thisPokemon) {
     if (thisPokemon.evolutions.name !== "") {
       return (
@@ -254,11 +254,198 @@ function PokeDetail() {
     }
   }
 
+  // =====Pokemon Dynamax=====
+  function pokeDynamax(thisPokemon) {
+    if (thisPokemon.dynamax.unlock == true) {
+      return (
+        <div className="relative z-0 mt-6 flex flex-col justify-center items-center">
+          <h1 className="text-lg font-bold mb-2">Dynamax Introductions</h1>
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+            {/* Unlock */}
+            <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+              <div className="p-2 border bg-slate-400 rounded-md">{thisPokemon.dynamax.dynamaxUnlock.name}</div>
+              <div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 1 -</span>
+                  {thisPokemon.dynamax.dynamaxUnlock.level1}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 2 -</span>
+                  {thisPokemon.dynamax.dynamaxUnlock.level2}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 3 -</span>
+                  {thisPokemon.dynamax.dynamaxUnlock.level3}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 4 -</span>
+                  {thisPokemon.dynamax.dynamaxUnlock.level4}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 5 -</span>
+                  {thisPokemon.dynamax.dynamaxUnlock.level5}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 6 -</span>
+                  {thisPokemon.dynamax.dynamaxUnlock.level6}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 7 -</span>
+                  {thisPokemon.dynamax.dynamaxUnlock.level7}
+                </div>
+              </div>
+            </div>
+
+            {/* ATK */}
+            <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+              <div className="p-2 border bg-slate-400 rounded-md">{thisPokemon.dynamax.dynamaxATK.name}</div>
+              <div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 1 -</span>
+                  {thisPokemon.dynamax.dynamaxATK.level1}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 2 -</span>
+                  {thisPokemon.dynamax.dynamaxATK.level2}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 3 -</span>
+                  {thisPokemon.dynamax.dynamaxATK.level3}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 4 -</span>
+                  {thisPokemon.dynamax.dynamaxATK.level4}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 5 -</span>
+                  {thisPokemon.dynamax.dynamaxATK.level5}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 6 -</span>
+                  {thisPokemon.dynamax.dynamaxATK.level6}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 7 -</span>
+                  {thisPokemon.dynamax.dynamaxATK.level7}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 8 -</span>
+                  {thisPokemon.dynamax.dynamaxATK.level8}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 9 -</span>
+                  {thisPokemon.dynamax.dynamaxATK.level9}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 10 -</span>
+                  {thisPokemon.dynamax.dynamaxATK.level10}
+                </div>
+              </div>
+            </div>
+
+            {/* DEF */}
+            <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+              <div className="p-2 border bg-slate-400 rounded-md">{thisPokemon.dynamax.dynamaxDEF.name}</div>
+              <div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 1 -</span>
+                  {thisPokemon.dynamax.dynamaxDEF.level1}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 2 -</span>
+                  {thisPokemon.dynamax.dynamaxDEF.level2}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 3 -</span>
+                  {thisPokemon.dynamax.dynamaxDEF.level3}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 4 -</span>
+                  {thisPokemon.dynamax.dynamaxDEF.level4}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 5 -</span>
+                  {thisPokemon.dynamax.dynamaxDEF.level5}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 6 -</span>
+                  {thisPokemon.dynamax.dynamaxDEF.level6}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 7 -</span>
+                  {thisPokemon.dynamax.dynamaxDEF.level7}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 8 -</span>
+                  {thisPokemon.dynamax.dynamaxDEF.level8}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 9 -</span>
+                  {thisPokemon.dynamax.dynamaxDEF.level9}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 10 -</span>
+                  {thisPokemon.dynamax.dynamaxDEF.level10}
+                </div>
+              </div>
+            </div>
+
+            {/* Exclusive */}
+            <div className="border rounded-md w-[300px] flex flex-col bg-white p-3 gap-2">
+              <div className="p-2 border bg-slate-400 rounded-md">{thisPokemon.dynamax.dynamaxExclusive.name}</div>
+              <div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 1 -</span>
+                  {thisPokemon.dynamax.dynamaxExclusive.level1}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 2 -</span>
+                  {thisPokemon.dynamax.dynamaxExclusive.level2}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 3 -</span>
+                  {thisPokemon.dynamax.dynamaxExclusive.level3}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 4 -</span>
+                  {thisPokemon.dynamax.dynamaxExclusive.level4}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 5 -</span>
+                  {thisPokemon.dynamax.dynamaxExclusive.level5}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 6 -</span>
+                  {thisPokemon.dynamax.dynamaxExclusive.level6}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 7 -</span>
+                  {thisPokemon.dynamax.dynamaxExclusive.level7}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 8 -</span>
+                  {thisPokemon.dynamax.dynamaxExclusive.level8}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 9 -</span>
+                  {thisPokemon.dynamax.dynamaxExclusive.level9}
+                </div>
+                <div className="p-2 border rounded-md">
+                  <span className="font-semibold mr-1">Level 10 -</span>
+                  {thisPokemon.dynamax.dynamaxExclusive.level10}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+  }
+
   return (
     <>
       {/* Mobile Version */}
       <div className={`bg-${thisPokemon.bgOrigin} bg-cover min-h-[100vh] flex flex-col items-center gap-6 lg:hidden`}>
-        {/* Test tabs flowbite */}
         <Tabs.Group aria-label="Tabs with underline" style="underline" className="mt-6">
           {/* =====Basic Info Tab===== */}
           <Tabs.Item title="Info">
@@ -270,13 +457,7 @@ function PokeDetail() {
             {pokeRole()}
 
             {pokeFlash()}
-          </Tabs.Item>
 
-          {/* =====Base Stats Tab===== */}
-          <Tabs.Item title="Base Stats">
-            {pokeCardTemp()}
-
-            {/* Pokemon Base Stats */}
             {skillBarChart({ data })}
           </Tabs.Item>
 
@@ -304,22 +485,53 @@ function PokeDetail() {
 
             {pokeEvolutions(thisPokemon)}
           </Tabs.Item>
+
+          {/* =====Dynamax===== */}
+          <Tabs.Item title="Dynamax">
+            {pokeCardTemp()}
+
+            {pokeDynamax(thisPokemon)}
+          </Tabs.Item>
         </Tabs.Group>
       </div>
 
       {/* Desktop Version */}
-      <div className="lg:flex flex-col justify-center hidden">
-        <Tabs.Group aria-label="Tabs with underline" style="underline" className="mt-6">
+      <div className={`bg-${thisPokemon.bgOrigin} top-0 left-0 fixed w-full h-full overflow-y-auto lg:flex flex-col items-start hidden`}>
+        <div className="mt-12 mb-4 ml-96 scale-125">{pokeCardTemp()}</div>
+        <Tabs.Group aria-label="Tabs with underline" style="underline" className="ml-40">
           {/* =====Basic Info Tab===== */}
           <Tabs.Item title="Info">
             {/* Pokemon Card */}
-            {pokeCardTemp()}
+            <div className="grid grid-cols-2 xl:grid-cols-3 gap-8 items-start -mt-8 ml-40">
+              <div>
+                {pokeDescription()}
+                {pokeRole()}
+                {pokeFlash()}
+              </div>
 
-            {pokeDescription()}
+              {skillBarChart({ data })}
+              {pokeSkills()}
+            </div>
+          </Tabs.Item>
 
-            {pokeRole()}
+          <Tabs.Item title="More">
+            {/* Pokemon Card */}
+            <div className="grid grid-cols-2 xl:grid-cols-3 gap-8 items-start -mt-8 ml-40">
+              <div className="order-2 xl:order-none">{pokeTalent()}</div>
+              <div className="order-1 xl:order-none">
+                {pokeExtremeTrain()}
+                {pokeSource()}
+                <span className="xl:hidden">{pokeEvolutions(thisPokemon)}</span>
+              </div>
+              <div className="hidden xl:block">{pokeEvolutions(thisPokemon)}</div>
+            </div>
+          </Tabs.Item>
 
-            {pokeFlash()}
+          <Tabs.Item title="Dynamax">
+            {/* Pokemon Card */}
+            <div className="-mt-8 ml-40">
+              <div>{pokeDynamax(thisPokemon)}</div>
+            </div>
           </Tabs.Item>
         </Tabs.Group>
       </div>
