@@ -27,7 +27,7 @@ const SideBar = () => {
 
       <span className="absolute z-10 top-6 right-8 flex items-center  md:hidden">
         <h1 className="font-bold text-xl">
-          <span className="text-red-600">POKÉV</span>
+          <span className="text-costumeRed">POKÉV</span>
           Dex
         </h1>
       </span>
