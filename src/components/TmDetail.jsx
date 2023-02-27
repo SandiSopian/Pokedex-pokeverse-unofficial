@@ -38,7 +38,7 @@ const TmDetail = () => {
       <div ref={parent} className="relative z-0 md:grid md:grid-cols-2 xl:grid-cols-3 lg:ml-56 xl:ml-72 2xl:ml-32 2xl:-mr-32 ">
         {filteredTms.map((tms) => (
           <div key={tms.id}>
-            <div className="rounded-md w-[300px] flex flex-row justify-center bg-white p-3 gap-2 m-2 ">
+            <div className="rounded-md border w-[300px] flex flex-row justify-center bg-white p-3 gap-2 m-2 ">
               <div className="container p-3 flex flex-col gap-1 ">
                 <div className="flex justify-between items-center">
                   <div className="font-semibold">{tms.name}</div>
