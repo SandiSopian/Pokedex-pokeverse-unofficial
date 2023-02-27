@@ -146,12 +146,12 @@ const PokeCard = () => {
   return (
     <section className="grid gap-2 items-center justify-center mt-16">
       {/* Searching Data */}
-      <div className="lg:-ml-[242px] xl:-ml-[435px]">
+      <div className="lg:-ml-[242px] xl:-ml-[500px]">
         <input type="text" value={searchTerm} placeholder="Search Pokemon..." onChange={(e) => setSearchTerm(e.target.value)} className="w-[152px] rounded-md" />
       </div>
 
       {/*=====Filtering Data=====*/}
-      <div className="flex items-center justify-center gap-2 lg:-ml-28 xl:-ml-[305px] ">
+      <div className="flex items-center justify-center gap-2 lg:-ml-28 xl:-ml-[370px] ">
         <div>
           {/* Sort by Team */}
           <select onChange={(e) => filterTeam(e.target.value)} className="rounded-md">

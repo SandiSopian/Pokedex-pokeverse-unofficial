@@ -16,28 +16,37 @@ import toggleMenuBar from "../utils/toggleMenuBar";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { NavLink } from "react-router-dom";
 import logoImg from "../assets/svg/pokeball-logo.svg";
+import { IconContext } from "react-icons";
 
 const SideBar = () => {
   const [parent] = useAutoAnimate();
+  function ReactIconStyle({ children }) {
+    return (
+      <IconContext.Provider value={{ color: "black", className: "global-class-name" }}>
+        <div>{children}</div>
+      </IconContext.Provider>
+    );
+  }
+
   return (
     <>
       <span className="absolute z-10 text-4xl top-5 left-4 cursor-pointer" onClick={toggleMenuBar}>
         <GiHamburgerMenu />
       </span>
 
-      <span className="absolute z-10 top-6 right-8 flex items-center  md:hidden">
+      <span className="absolute z-10 top-6 right-8 flex items-center md:hidden">
         <h1 className="font-bold text-xl">
           <span className="text-costumeRed">POKÉV</span>
           Dex
         </h1>
       </span>
 
-      <nav className="absolute z-20 pl-8">
-        <div className="sidebar fixed top-0 bottom-0 -ml-8 lg:ml-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-gray-900 ">
+      <nav className="absolute z-20 ">
+        <div className="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-[url(/src/assets/images/bg-img/bg-navbar.png)] bg-cover bg-center">
           <div className="text-gray-100 text-xl">
             <div className="p-2 mt-1 flex items-center justify-between">
-              <h1 className="font-bold text-gray-50 text-xl ml-3 flex items-center">
-                <span className="text-red-600">POKÉV</span>
+              <h1 className="font-bold text-gray-50 text-xl ml-16 mt-2 lg:mt-0 flex items-center justify-center">
+                <span>POKÉV</span>
                 Dex
                 <span className="ml-2">
                   <img src={logoImg} alt="logo pokedex" />
@@ -50,41 +59,55 @@ const SideBar = () => {
 
           {/* Components Tab */}
 
-          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/">
-            <TbPokeball />
-            <span className="text-sm ml-4 text-gray-200">Pokemon</span>
+          <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400 mt-28 lg:mt-24" : "sideBarTabs font-normal mt-28 lg:mt-24")} to="/">
+            <ReactIconStyle>
+              <TbPokeball />
+            </ReactIconStyle>
+            <span className="text-sm ml-4 text-black">Pokemon</span>
           </NavLink>
           <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/tms">
-            <FaCompactDisc />
-            <span className="text-sm ml-4 text-gray-200">TM</span>
+            <ReactIconStyle>
+              <FaCompactDisc />
+            </ReactIconStyle>
+            <span className="text-sm ml-4 text-black">TM</span>
           </NavLink>
           <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/held items">
-            <BsScrewdriver />
-            <span className="text-sm ml-4 text-gray-200">Held Items</span>
+            <ReactIconStyle>
+              <BsScrewdriver />
+            </ReactIconStyle>
+            <span className="text-sm ml-4 text-black">Held Items</span>
           </NavLink>
           <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/z-crystal">
-            <SiCrystal />
-            <span className="text-sm ml-4 text-gray-200">Z-Crystal</span>
+            <ReactIconStyle>
+              <SiCrystal />
+            </ReactIconStyle>
+            <span className="text-sm ml-4 text-black">Z-Crystal</span>
           </NavLink>
           <NavLink className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")} to="/nature">
-            <FaMask />
-            <span className="text-sm ml-4 text-gray-200">Nature</span>
+            <ReactIconStyle>
+              <FaMask />
+            </ReactIconStyle>
+            <span className="text-sm ml-4 text-black">Nature</span>
           </NavLink>
 
           {/* More */}
           <div className="sideBarTabs" onClick={dropdown}>
             <span className="mr-4"></span>
             <div className="flex justify-between w-full items-center">
-              <span className="text-sm ml-4 text-gray-200">More</span>
-              <TfiMore className="bg-inherit" />
+              <span className="text-sm ml-4 text-black">More</span>
+              <ReactIconStyle>
+                <TfiMore />
+              </ReactIconStyle>
             </div>
           </div>
 
-          <div className="text-left text-sm mt-2 w-4/5 mx-auto text-white hidden" id="submenu">
+          <div className="text-left text-sm mt-2 w-4/5 mx-auto hidden" id="submenu">
             <h1 className="cursor-pointer rounded-md mt-1 ml-3">
               <NavLink className={({ isActive }) => (isActive ? "sideBarTabs flex gap-2 items-center bg-gray-400" : "sideBarTabs font-normal flex gap-2 items-center")} to="/plate">
-                <GiDividedSquare />
-                <span>Plate</span>
+                <ReactIconStyle>
+                  <GiDividedSquare />
+                </ReactIconStyle>
+                <span className="text-black">Plate</span>
               </NavLink>
             </h1>
           </div>
@@ -93,12 +116,16 @@ const SideBar = () => {
 
           {/* Personal Tabs */}
           <NavLink to="/about" className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")}>
-            <BsInfoCircle />
-            <span className="text-sm ml-4 text-gray-200">About</span>
+            <ReactIconStyle>
+              <BsInfoCircle />
+            </ReactIconStyle>
+            <span className="text-sm ml-4 text-black">About</span>
           </NavLink>
           <NavLink to="/support" className={({ isActive }) => (isActive ? "sideBarTabs bg-gray-400" : "sideBarTabs font-normal")}>
-            <GiPayMoney />
-            <span className="text-sm ml-4 text-gray-200">Support Us</span>
+            <ReactIconStyle>
+              <GiPayMoney />
+            </ReactIconStyle>
+            <span className="text-sm ml-4 text-black">Support Us</span>
           </NavLink>
         </div>
       </nav>

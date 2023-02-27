@@ -30,7 +30,7 @@ const TmDetail = () => {
   return (
     <section className="grid gap-2 items-center justify-center mx-auto mt-16">
       {/* Searching Data */}
-      <div className="lg:-ml-[242px] xl:-ml-[435px]">
+      <div className="lg:-ml-[242px] xl:-ml-[500px]">
         <input type="text" value={searchTerm} placeholder="Search Tms..." onChange={(e) => setSearchTerm(e.target.value)} className="w-[152px] rounded-md" />
       </div>
 

@@ -4,7 +4,7 @@ import SideBar from "../components/SideBar";
 const Header = ({ children }) => {
   return (
     <div>
-      <SideBar />
+      <SideBar className="bgNav" />
       {children}
     </div>
   );
